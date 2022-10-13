@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class UserName {
   public static void main(String[] args) {
-    // create Scanner object
+    //Create Scanner object
     Scanner s = new Scanner(System.in);
 
-    // get String input from user
+    //Get String input from user
     System.out.print("Enter your first name: ");
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
@@ -15,20 +15,26 @@ public class UserName {
     System.out.print("Are you a teacher or student?: ");
     String user = s.nextLine();
 
-    // test output
-    System.out.println("Hello " + firstName.replaceAll("\\s","") + initialize(lastName) + favoriteNumber);
-
+    System.out.println("Username: " + firstName.replaceAll("\\s","") + getInitial(lastName) + favoriteNumber);
+    
+    if (user.toLowerCase().equals("student")){
+        System.out.println("Email: " + firstName.replaceAll("\\s","").toLowerCase() + getInitial(lastName).toLowerCase() + favoriteNumber + "@nycstudents.net");
+    }//End if statement
+    else{
+        System.out.println("Email: " + getInitial(firstName).toLowerCase() + lastName.replaceAll("\\s","").toLowerCase() + favoriteNumber + "@schools.nyc.gov");
+    }//End else statement
+    
     s.close();
-  } // end main method
+  } //End main method
 
   /*
-   * Name: initialize
+   * Name: getInitial
    * Purpose: send back the first character (inital) of a name
    * Input: a name (String)
    * Return: a single character (String)
    */
-  public static String initialize(String n) {
+  public static String getInitial(String n) {
     return n.substring(0, 1);
-  } // end initialize method
+  } //End initialize method
 
-} // end class
+} //End UserName class
