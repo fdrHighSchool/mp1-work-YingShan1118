@@ -15,7 +15,7 @@ public class UserName {
     System.out.print("Are you a teacher or student?: ");
     String user = s.nextLine();
 
-    System.out.println("Username: " + firstName.replaceAll("\\s","") + getInitial(lastName) + favoriteNumber);
+    System.out.println("Username: " + firstName + ", "+ getInitial(lastName) + favoriteNumber);
     
     if (user.toLowerCase().equals("student")){
         System.out.println("Email: " + firstName.replaceAll("\\s","").toLowerCase() + getInitial(lastName).toLowerCase() + favoriteNumber + "@nycstudents.net");
