@@ -12,19 +12,36 @@ public class rng {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     
-    System.out.println("What would you like the minimum number to be?");
+    System.out.print("What would you like the minimum number to be?: ");
     int minimum = in.nextInt(); 
     
-    System.out.println("What would you like the minimum number to be?");
+    System.out.print("What would you like the minimum number to be?: ");
     int maximum = in.nextInt(); 
     
-    int randomNumber = (int)((Math.random() * (maximum - minimum + 1) + minimum));
+    System.out.print("How many times would you like to guess?: ");
+    int chance = in.nextInt();
+    
+    Integer randomNumber = (int)((Math.random() * (maximum - minimum + 1) + minimum));
     System.out.println("I am thinking of a number between " + minimum + " and " + maximum);
     System.out.println("(including both). Can you guess what it is?");
-    System.out.print("Type a number: ");
-    int guessNumber = in.nextInt();
-    System.out.println("Your guess is: " + guessNumber);
+    
+    while (chance != 0){
+        System.out.print("Type a number: ");
+        Integer guessNumber = in.nextInt();
+        System.out.println("Your guess is: " + guessNumber);
+        if(guessNumber.equals(randomNumber)){
+            System.out.println("You guessed the correct number!");
+        }//End if statement
+        else if (guessNumber > randomNumber){
+            System.out.println("The number is less than " + guessNumber);
+        }//End else if statement
+        else{
+            System.out.println("The number is less than " + guessNumber);
+        }//End else statement
+        //System.out.println("
+        chance -= 1;
+    }//End of while statment
     System.out.println("The number I was thinking of is: " + randomNumber);
-    System.out.println("You were off by: " + (randomNumber - guessNumber));
-  }
-}
+    //System.out.println("You were off by: " + (randomNumber - guessNumber));
+  }//End of main method
+}//End of rng class
