@@ -13,11 +13,11 @@ public class UserName {
     System.out.print("Enter you favorite number: ");
     String favoriteNumber = s.nextLine();
     System.out.print("Are you a teacher or student?: ");
-    String user = s.nextLine();
+    String role = s.nextLine().toLowerCase();
 
     System.out.println("Username: " + firstName + ", "+ getInitial(lastName) + favoriteNumber);
     
-    if (user.toLowerCase().equals("student")){
+    if (role.equals("student")){
         System.out.println("Email: " + firstName.replaceAll("\\s","").toLowerCase() + getInitial(lastName).toLowerCase() + favoriteNumber + "@nycstudents.net");
     }//End if statement
     else{
