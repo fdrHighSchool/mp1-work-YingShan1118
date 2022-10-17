@@ -34,7 +34,7 @@ public class rng {
     else{
         while (!chance.equals(0)){
             System.out.print("Type a number: ");
-            guessNumber = in.nextInt();cc
+            guessNumber = in.nextInt();
             System.out.println("Your guess is: " + guessNumber);
             if(guessNumber.equals(randomNumber)){
                 System.out.println("You guessed the correct number!");
