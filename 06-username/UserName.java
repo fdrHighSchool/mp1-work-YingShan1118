@@ -27,7 +27,7 @@ public class UserName {
     System.out.print("How long would you like the password to be?: ");
     int length = s.nextInt();
     
-    generatePassword(length);
+    System.out.println("Password: " + generatePassword(length));
     
     s.close();
   } //End main method
@@ -39,7 +39,6 @@ public class UserName {
     public static String generatePassword(int length){
       String password = "";
       for (int i = 0; i < length; i++){
-          //47 - 
           //65 - 90 Capital Letter
           //97 - 122 Lower Case
           int randomNumber = (int)((Math.random() * (122 - 65 +1) + 65));
