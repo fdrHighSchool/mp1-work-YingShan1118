@@ -38,13 +38,12 @@ public class UserName {
    */
     public static String generatePassword(int length){
       String password = "";
-      char c;
       for (int i = 0; i < length; i++){
           //47 - 
           //65 - 90 Capital Letter
           //97 - 122 Lower Case
           int randomNumber = (int)((Math.random() * (122 - 65 +1) + 65));
-          c = (char)randomNumber;
+          char c = (char)randomNumber;
           password += c;
       }
       return password;
