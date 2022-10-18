@@ -24,9 +24,32 @@ public class UserName {
         System.out.println("Email: " + getInitial(firstName).toLowerCase() + lastName.replaceAll("\\s","").toLowerCase() + favoriteNumber + "@schools.nyc.gov");
     }//End else statement
     
+    System.out.print("How long would you like the password to be?: ");
+    int length = s.nextInt();
+    
+    generatePassword(length);
+    
     s.close();
   } //End main method
-
+  /*
+   * Purpose: send back a random String of numbers, upper/lower case letter
+   * Input: length of password (int)
+   * Return: s String of password (String)
+   */
+    public static String generatePassword(int length){
+      String password = "";
+      char c;
+      for (int i = 0; i < length; i++){
+          //47 - 
+          //65 - 90 Capital Letter
+          //97 - 122 Lower Case
+          int randomNumber = (int)((Math.random() * (122 - 65 +1) + 65));
+          c = (char)randomNumber;
+          password += c;
+      }
+      return password;
+    }//End generatePassword method
+    
   /*
    * Name: getInitial
    * Purpose: send back the first character (inital) of a name
