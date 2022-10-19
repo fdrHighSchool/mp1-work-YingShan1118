@@ -17,7 +17,7 @@ public class UserName {
     System.out.print("How long would you like the password to be?: ");
     int length = s.nextInt();
 
-    System.out.println("Username: " + firstName + ", "+ getInitial(lastName) + favoriteNumber);
+    System.out.println("Username: " + firstName.replaceAll("\\s","") + getInitial(lastName) + favoriteNumber);
     
     if (role.equals("student")){
         System.out.println("Email: " + firstName.replaceAll("\\s","").toLowerCase() + getInitial(lastName).toLowerCase() + favoriteNumber + "@nycstudents.net");
