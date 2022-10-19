@@ -14,6 +14,8 @@ public class UserName {
     String favoriteNumber = s.nextLine();
     System.out.print("Are you a teacher or student?: ");
     String role = s.nextLine().toLowerCase();
+    System.out.print("How long would you like the password to be?: ");
+    int length = s.nextInt();
 
     System.out.println("Username: " + firstName + ", "+ getInitial(lastName) + favoriteNumber);
     
@@ -23,9 +25,6 @@ public class UserName {
     else{
         System.out.println("Email: " + getInitial(firstName).toLowerCase() + lastName.replaceAll("\\s","").toLowerCase() + favoriteNumber + "@schools.nyc.gov");
     }//End else statement
-    
-    System.out.print("How long would you like the password to be?: ");
-    int length = s.nextInt();
     
     System.out.println("Password: " + generatePassword(length));
     
