@@ -40,7 +40,7 @@ public class UserName {
       for (int i = 0; i < length; i++){
           //65 - 90 Capital Letter
           //97 - 122 Lower Case
-          int randomNumber = (int)(Math.random() * (122 - 65 +1) + 65);
+          int randomNumber = (int)(Math.random() * (122 - 48 +1) + 48);
           char c = (char)randomNumber;
           password += c;
       }
