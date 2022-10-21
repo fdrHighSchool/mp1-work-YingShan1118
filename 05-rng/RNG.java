@@ -34,15 +34,15 @@ public class Rng {
         guessNumber = s.nextInt();
         System.out.println("Your guess is: " + guessNumber);
         if(guessNumber.equals(randomNumber)){
-            System.out.println("\u001B[5m" + "\u001B[1m" + "\u001B[31m" + "You guessed the correct number!" + "\u001B[0m");
-            i = 0;
+            System.out.println("\u001B[1;31m" + "You guessed the correct number!" + "\u001B[0m");
+            i = chance;
         }//End if statement
         else if (guessNumber > randomNumber){
-            System.out.println("The number is " + "\u001B[4m" + "less than" + "\u001B[m" + " " + guessNumber + "\u001B[0m");
+            System.out.println("The number is " + "\u001B[4m" + "less than" + "\u001B[0m" + " " + guessNumber);
             chanceLeft(chance,i);
         }//End else if statement
         else{
-            System.out.println("The number is " + "\u001B[4m" + "greater than" + "\u001B[0m" + " " + guessNumber + "\u001B[0m");
+            System.out.println("The number is " + "\u001B[4m" + "greater than" + "\u001B[0m" + " " + guessNumber);
             chanceLeft(chance,i);
         }//End else statement
     }//End of for loop
@@ -54,6 +54,6 @@ public class Rng {
 }//End of main method
 
 public static void chanceLeft(int chance, int times){
-    System.out.println("You still have " + (chance - times) + " chance(s) left");
+    System.out.println("You have " + (chance - times) + " chance(s) left");
 }
 }//End of rng class
