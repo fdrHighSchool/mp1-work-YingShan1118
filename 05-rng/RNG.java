@@ -25,6 +25,7 @@ public class Rng {
     System.out.println(randomNumber);
     System.out.println("I am thinking of a number between " + minimum + " and " + maximum);
     System.out.println("(including both). Can you guess what it is?");
+    System.out.println("");
     
     Integer guessNumber = 0;
     
@@ -34,7 +35,8 @@ public class Rng {
         guessNumber = s.nextInt();
         System.out.println("Your guess is: " + guessNumber);
         if(guessNumber.equals(randomNumber)){
-            System.out.println("\u001B[1;31m" + "You guessed the correct number!" + "\u001B[0m");
+            System.out.println("\u001B[5;31m" + "You guessed the correct number!" + "\u001B[0m");
+            System.out.println("\u001B[31m" + "It took you " + "\u001B[1;4m" + i + "\u001B[0;31m" + " time(s) to guess the correct number!" + "\u001B[0m");
             i = chance;
         }//End if statement
         else if (guessNumber > randomNumber){
@@ -54,6 +56,7 @@ public class Rng {
 }//End of main method
 
 public static void chanceLeft(int chance, int times){
-    System.out.println("You have " + (chance - times) + " chance(s) left");
+    System.out.println("You have " + "\u001B[1m" + (chance - times) + "\u001B[0m" + " chance(s) left");
+    System.out.println("");
 }
 }//End of rng class
