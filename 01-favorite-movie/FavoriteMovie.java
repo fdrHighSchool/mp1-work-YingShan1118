@@ -9,5 +9,5 @@ public class FavoriteMovie
 {
    public static void main(String[] args) {
     System.out.println("My favorite movie is Detective Chinatown 2");
-    }
-}
+    }//End of main method
+}//End of Main class
